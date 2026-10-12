@@ -15,7 +15,8 @@ public class Laboratorio_hashmap {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+        interfaz_cajero cajero = new interfaz_cajero();
+        cajero.setVisible(true);
     }//fin del main
     
 }//fin del proyecto
