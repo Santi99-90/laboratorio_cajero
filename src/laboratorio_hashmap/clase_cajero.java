@@ -12,7 +12,7 @@ import java.util.HashMap;
  */
 public class clase_cajero {
     HashMap<Integer, Integer> cajero_automatico = new HashMap<>();
-    private int[] denominaciones = {10000, 20000, 50000, 100000};
+    public static final int[] denominaciones = {10000, 20000, 50000, 100000};
     public static final int cantidad_inicial = 100;
 
     public clase_cajero() {

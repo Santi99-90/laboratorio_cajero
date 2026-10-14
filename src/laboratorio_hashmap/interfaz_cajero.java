@@ -4,12 +4,14 @@
  */
 package laboratorio_hashmap;
 
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Hplay
  */
 public class interfaz_cajero extends javax.swing.JFrame {
-    
+    private clase_cajero cajero = new clase_cajero();
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(interfaz_cajero.class.getName());
 
     /**
@@ -17,6 +19,7 @@ public class interfaz_cajero extends javax.swing.JFrame {
      */
     public interfaz_cajero() {
         initComponents();
+        actualizar_tabla();
     }
 
     /**
@@ -166,6 +169,16 @@ public class interfaz_cajero extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    private void actualizar_tabla(){
+        DefaultTableModel modelo = (DefaultTableModel) tabla_billetes.getModel();
+        modelo.setRowCount(0);
+    
+        for (int denominacion : cajero.denominaciones) {
+            int cantidad = cajero.obtener_cantidad(denominacion);
+            int dinero = denominacion * cantidad;
+            modelo.addRow(new Object[]{denominacion, cantidad, dinero});
+        }
+    }
 
     /**
      * @param args the command line arguments
