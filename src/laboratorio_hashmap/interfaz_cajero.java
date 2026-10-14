@@ -66,39 +66,99 @@ public class interfaz_cajero extends javax.swing.JFrame {
         panel_teclado.setLayout(new java.awt.GridLayout(0, 3, 5, 8));
 
         B1.setText("1");
+        B1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B1ActionPerformed(evt);
+            }
+        });
         panel_teclado.add(B1);
 
         B2.setText("2");
+        B2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B2ActionPerformed(evt);
+            }
+        });
         panel_teclado.add(B2);
 
         B3.setText("3");
+        B3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B3ActionPerformed(evt);
+            }
+        });
         panel_teclado.add(B3);
 
         B4.setText("4");
+        B4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B4ActionPerformed(evt);
+            }
+        });
         panel_teclado.add(B4);
 
         B5.setText("5");
+        B5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B5ActionPerformed(evt);
+            }
+        });
         panel_teclado.add(B5);
 
         B6.setText("6");
+        B6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B6ActionPerformed(evt);
+            }
+        });
         panel_teclado.add(B6);
 
         B7.setText("7");
+        B7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B7ActionPerformed(evt);
+            }
+        });
         panel_teclado.add(B7);
 
         B8.setText("8");
+        B8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B8ActionPerformed(evt);
+            }
+        });
         panel_teclado.add(B8);
 
         B9.setText("9");
+        B9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B9ActionPerformed(evt);
+            }
+        });
         panel_teclado.add(B9);
 
         Blimpiar.setText("Limpiar");
+        Blimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BlimpiarActionPerformed(evt);
+            }
+        });
         panel_teclado.add(Blimpiar);
 
         B0.setText("0");
+        B0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B0ActionPerformed(evt);
+            }
+        });
         panel_teclado.add(B0);
 
         Bretroceder.setText("<-");
+        Bretroceder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BretrocederActionPerformed(evt);
+            }
+        });
         panel_teclado.add(Bretroceder);
 
         Bretirar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -145,10 +205,9 @@ public class interfaz_cajero extends javax.swing.JFrame {
                 .addContainerGap(125, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 531, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(panel_teclado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 531, Short.MAX_VALUE)
-                        .addComponent(Bretirar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(panel_teclado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 531, Short.MAX_VALUE)
+                    .addComponent(Bretirar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(145, 145, 145))
         );
         layout.setVerticalGroup(
@@ -169,6 +228,80 @@ public class interfaz_cajero extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void B1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B1ActionPerformed
+        // TODO add your handling code here:
+        agregar_digito("1");
+    }//GEN-LAST:event_B1ActionPerformed
+
+    private void B2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B2ActionPerformed
+        // TODO add your handling code here:
+        agregar_digito("2");
+    }//GEN-LAST:event_B2ActionPerformed
+
+    private void B3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B3ActionPerformed
+        // TODO add your handling code here:
+        agregar_digito("3");
+    }//GEN-LAST:event_B3ActionPerformed
+
+    private void B4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B4ActionPerformed
+        // TODO add your handling code here:
+        agregar_digito("4");
+    }//GEN-LAST:event_B4ActionPerformed
+
+    private void B5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B5ActionPerformed
+        // TODO add your handling code here:
+        agregar_digito("5");
+    }//GEN-LAST:event_B5ActionPerformed
+
+    private void B6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B6ActionPerformed
+        // TODO add your handling code here:
+        agregar_digito("6");
+    }//GEN-LAST:event_B6ActionPerformed
+
+    private void B7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B7ActionPerformed
+        // TODO add your handling code here:
+        agregar_digito("7");
+    }//GEN-LAST:event_B7ActionPerformed
+
+    private void B8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B8ActionPerformed
+        // TODO add your handling code here:
+        agregar_digito("8");
+    }//GEN-LAST:event_B8ActionPerformed
+
+    private void B9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B9ActionPerformed
+        // TODO add your handling code here:
+        agregar_digito("9");
+    }//GEN-LAST:event_B9ActionPerformed
+
+    private void B0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B0ActionPerformed
+        // TODO add your handling code here:
+        agregar_digito("0");
+    }//GEN-LAST:event_B0ActionPerformed
+
+    private void BlimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BlimpiarActionPerformed
+        // TODO add your handling code here:
+        pantalla.setText("");
+    }//GEN-LAST:event_BlimpiarActionPerformed
+
+    private void BretrocederActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BretrocederActionPerformed
+        // TODO add your handling code here:
+        String texto = pantalla.getText();
+        if (texto.length() > 0) {
+            String backspace = texto.substring(0, texto.length() - 1);
+            pantalla.setText(backspace);
+        }
+    }//GEN-LAST:event_BretrocederActionPerformed
+    
+    private void agregar_digito(String digito){
+        if (pantalla.getText().length() >= 7) {
+            
+        }
+        else{
+            pantalla.append(digito);
+        }
+    }
+    
     private void actualizar_tabla(){
         DefaultTableModel modelo = (DefaultTableModel) tabla_billetes.getModel();
         modelo.setRowCount(0);

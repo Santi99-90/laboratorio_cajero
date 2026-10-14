@@ -98,61 +98,97 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="1"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B1ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="B2">
           <Properties>
             <Property name="text" type="java.lang.String" value="2"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B2ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="B3">
           <Properties>
             <Property name="text" type="java.lang.String" value="3"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B3ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="B4">
           <Properties>
             <Property name="text" type="java.lang.String" value="4"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B4ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="B5">
           <Properties>
             <Property name="text" type="java.lang.String" value="5"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B5ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="B6">
           <Properties>
             <Property name="text" type="java.lang.String" value="6"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B6ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="B7">
           <Properties>
             <Property name="text" type="java.lang.String" value="7"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B7ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="B8">
           <Properties>
             <Property name="text" type="java.lang.String" value="8"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B8ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="B9">
           <Properties>
             <Property name="text" type="java.lang.String" value="9"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B9ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Blimpiar">
           <Properties>
             <Property name="text" type="java.lang.String" value="Limpiar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BlimpiarActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="B0">
           <Properties>
             <Property name="text" type="java.lang.String" value="0"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B0ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Bretroceder">
           <Properties>
             <Property name="text" type="java.lang.String" value="&lt;-"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BretrocederActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
