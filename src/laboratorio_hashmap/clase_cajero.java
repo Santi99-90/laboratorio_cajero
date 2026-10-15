@@ -29,6 +29,15 @@ public class clase_cajero {
         return cajero_automatico.get(denominacion);
     }    
     
+    public String validar_monto(int monto){
+        if (monto < 10000 || monto > 1000000) {
+            return "Error:  el monto debe estar entre 10.000 y 1.000.000";
+        }
+        else if (monto % 10 != 0) {
+            return "Error: el monto debe ser multiplo de 10";
+        }
+        return "";
+    }
 
     
 }//fin de la clase

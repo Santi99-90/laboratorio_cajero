@@ -12,6 +12,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class interfaz_cajero extends javax.swing.JFrame {
     private clase_cajero cajero = new clase_cajero();
+    boolean mostrar_mensaje = false;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(interfaz_cajero.class.getName());
 
     /**
@@ -163,6 +164,11 @@ public class interfaz_cajero extends javax.swing.JFrame {
 
         Bretirar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Bretirar.setText("Retirar");
+        Bretirar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BretirarActionPerformed(evt);
+            }
+        });
 
         tabla_billetes.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tabla_billetes.setModel(new javax.swing.table.DefaultTableModel(
@@ -282,18 +288,53 @@ public class interfaz_cajero extends javax.swing.JFrame {
     private void BlimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BlimpiarActionPerformed
         // TODO add your handling code here:
         pantalla.setText("");
+        mostrar_mensaje = false;
     }//GEN-LAST:event_BlimpiarActionPerformed
 
     private void BretrocederActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BretrocederActionPerformed
         // TODO add your handling code here:
+        if (mostrar_mensaje == true) {
+            pantalla.setText("");
+            mostrar_mensaje = false;
+        }
         String texto = pantalla.getText();
         if (texto.length() > 0) {
             String backspace = texto.substring(0, texto.length() - 1);
             pantalla.setText(backspace);
         }
     }//GEN-LAST:event_BretrocederActionPerformed
+
+    private void BretirarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BretirarActionPerformed
+        // TODO add your handling code here:
+        String texto = pantalla.getText();
+        
+        if (texto.isEmpty()|| mostrar_mensaje == true) {
+            pantalla.setText("Por favor escriba un monto");
+            mostrar_mensaje = true;
+            return;
+        }
+        int monto = Integer.parseInt(texto);
+        String error = cajero.validar_monto(monto);
+        
+        if (error.isEmpty()) {
+            pantalla.setText("Monto valido, retiro en desarrollo");
+            mostrar_mensaje = true;
+            
+        }
+        if (!error.isEmpty()) {
+            pantalla.setText(error);
+            mostrar_mensaje = true;
+            
+        }
+         
+    }//GEN-LAST:event_BretirarActionPerformed
     
     private void agregar_digito(String digito){
+        if (mostrar_mensaje == true) {
+            pantalla.setText("");
+            mostrar_mensaje = false;
+        }
+        
         if (pantalla.getText().length() >= 7) {
             
         }
