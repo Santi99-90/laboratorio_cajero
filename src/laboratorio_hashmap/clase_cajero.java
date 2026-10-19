@@ -57,11 +57,27 @@ public class clase_cajero {
             billetes[i] += monto / denominaciones[i]; 
             monto = monto % denominaciones[i];
         }
-        
+        //cuando monto no es 0, es decir cuando sobran billetes por devolver.
         if (monto != 0) {
             return null;
         }
         return billetes;
+    }
+    
+    public boolean hay_suficientes_billetes(int[] billetes){
+        for (int i = 0; i < billetes.length; i++) {
+            if (billetes[i] > obtener_cantidad(denominaciones[i])) {
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    public void descontar_billetes(int[] billetes){
+        for (int i = 0; i < billetes.length; i++) {
+            int quedan = obtener_cantidad(denominaciones[i])- billetes[i];
+            cajero_automatico.put(denominaciones[i], quedan);
+        }
     }
 
     
