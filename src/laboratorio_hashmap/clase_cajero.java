@@ -38,6 +38,31 @@ public class clase_cajero {
         }
         return "";
     }
+    
+    public int[] calcular_distribucion(int monto){
+        int[] billetes = new int[4];
+        if (monto == 50000) {
+            billetes[0] = 1;
+            billetes[1] = 2;
+            return billetes;
+        }
+        if (monto >= 100000) {
+            billetes[0] = 1;
+            billetes[1] = 2;
+            billetes[2] = 1;
+            monto = monto - 100000;
+            
+        }
+        for (int i = denominaciones.length - 1; i >= 0; i--) {
+            billetes[i] += monto / denominaciones[i]; 
+            monto = monto % denominaciones[i];
+        }
+        
+        if (monto != 0) {
+            return null;
+        }
+        return billetes;
+    }
 
     
 }//fin de la clase
