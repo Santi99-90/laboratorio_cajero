@@ -317,7 +317,28 @@ public class interfaz_cajero extends javax.swing.JFrame {
         String error = cajero.validar_monto(monto);
         
         if (error.isEmpty()) {
-            pantalla.setText("Monto valido, retiro en desarrollo");
+     
+            int[] distribucion = cajero.calcular_distribucion(monto);
+            if (distribucion == null) {
+                pantalla.setText("el monto no se puede armar con los billetes disponibles, escriba un monto multiplo de 10.000");
+                mostrar_mensaje = true;
+                return;
+            }
+            else if (!cajero.hay_suficientes_billetes(distribucion)) {
+                pantalla.setText("cajero con fondos insuficientes");
+                mostrar_mensaje = true;
+                return;
+            }
+           
+            cajero.descontar_billetes(distribucion);
+            actualizar_tabla();
+            String mensaje = "Retiro exitoso de: " + monto + "\n";
+            for (int i = 0; i < distribucion.length; i++) {
+                if (distribucion[i] > 0) {
+                    mensaje += distribucion[i] + " de " + cajero.denominaciones[i] + "\n";
+                }      
+            } 
+            pantalla.setText(mensaje);
             mostrar_mensaje = true;
             
         }
@@ -326,6 +347,7 @@ public class interfaz_cajero extends javax.swing.JFrame {
             mostrar_mensaje = true;
             
         }
+        
          
     }//GEN-LAST:event_BretirarActionPerformed
     
